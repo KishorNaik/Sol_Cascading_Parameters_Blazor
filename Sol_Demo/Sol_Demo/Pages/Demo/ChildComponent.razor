@@ -1,0 +1,10 @@
+﻿<h3>ChildComponent</h3>
+
+<h2>first Name : @FullName</h2>
+
+
+@code {
+
+    [CascadingParameter(Name ="FullName")]
+    public String FullName { get; set; }
+}

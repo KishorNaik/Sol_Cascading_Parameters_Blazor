@@ -1,0 +1,22 @@
+﻿@using Sol_Demo.Models
+@using Sol_Demo.Pages.Demo.ComplexTypes
+<h3>ParentComponent</h3>
+
+<CascadingValue Value="Users" Name="Users">
+    <Sol_Demo.Pages.Demo.ComplexTypes.ChildComponent></Sol_Demo.Pages.Demo.ComplexTypes.ChildComponent>
+</CascadingValue>
+
+@code {
+
+    public UserModel Users { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Users = new UserModel()
+        {
+            FirstName = "Kishor",
+            LastName = "Naik"
+        };
+     }
+
+}

@@ -1,0 +1,15 @@
+﻿@using Sol_Demo.Models
+<h3>ChildComponent</h3>
+
+<div>
+    <h3>@Users.FirstName</h3>
+    <br/>
+    <h3>@Users.LastName</h3>
+</div>
+
+@code {
+
+    [CascadingParameter(Name ="Users")]
+    public UserModel Users { get; set; }
+
+}
