@@ -1,10 +1,32 @@
 ﻿@using Sol_Demo.Models
 @using Sol_Demo.Pages.Demo.ComplexTypes
-<h3>ParentComponent</h3>
 
-<CascadingValue Value="Users" Name="Users">
-    <Sol_Demo.Pages.Demo.ComplexTypes.ChildComponent></Sol_Demo.Pages.Demo.ComplexTypes.ChildComponent>
-</CascadingValue>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div style="border:2px solid orange">
+                <h3>ParentComponent</h3>
+                <div>
+                    <h3>@Users.FirstName</h3>
+                    <br />
+                    <h3>@Users.LastName</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div style="border:2px solid brown">
+                <CascadingValue Value="Users" Name="Users">
+                    <Sol_Demo.Pages.Demo.ComplexTypes.ChildComponent></Sol_Demo.Pages.Demo.ComplexTypes.ChildComponent>
+                </CascadingValue>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 @code {
 

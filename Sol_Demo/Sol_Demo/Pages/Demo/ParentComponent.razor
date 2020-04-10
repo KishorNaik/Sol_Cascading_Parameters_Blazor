@@ -1,8 +1,26 @@
-﻿<h3>ParentComponent</h3>
+﻿
 
-<CascadingValue Value="FullName" Name="FullName">
-    <ChildComponent></ChildComponent>
-</CascadingValue>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div style="border:2px solid red">
+                <h3>ParentComponent</h3>
+                <h2>Parent Title: @FullName </h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div style="border:2px solid green">
+                <CascadingValue Value="FullName" Name="FullName">
+                    <ChildComponent></ChildComponent>
+                </CascadingValue>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 @code {
